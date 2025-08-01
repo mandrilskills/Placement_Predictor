@@ -12,16 +12,7 @@ y = df['placement']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 model = LogisticRegression()
 model.fit(X_train, y_train)
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #330029; /* Light greyish-blue */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 st.title("🎯 Your Placement Predictor")
 st.caption("Developed by Mandril Sircar")
 st.markdown("Fill in the student details below to predict the likelihood of placement.")
