@@ -6,52 +6,58 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 st.markdown("""
 <style>
-/* Set background and text */
+/* Light soothing background */
 .stApp {
-    background-color: #4B0082;
-    color: white;
+    background-color: #f5f3ff;  /* light lavender */
+    color: #333333;
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Form card styling */
+/* Center container with soft card styling */
 div.block-container {
     padding: 2rem;
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
-    background-color: #5E17EB;
+    background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
 }
 
-/* Input text and number styling */
-input, .stNumberInput > div > div > input {
-    background-color: #fff !important;
-    color: black !important;
-    border-radius: 10px;
+/* Input boxes */
+input, .stNumberInput input {
+    background-color: #f0f0ff !important;
+    color: #333333 !important;
+    border-radius: 10px !important;
 }
 
-/* Slider color */
+/* Sliders */
 div[data-baseweb="slider"] > div {
-    background: #ffffff22;
+    background: #cbd5f5 !important;
 }
-.css-1emrehy.edgvbvh3 { 
-    color: white;
+span[data-testid="stSliderValue"] {
+    color: #4b0082 !important;
 }
 
-/* Button styling */
+/* Buttons */
 .stButton > button {
-    background-color: #ffcc00;
+    background-color: #c3b5f5;
     color: black;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
 }
 
-h1, h2, h3 {
-    color: white;
+/* Headings and text */
+h1, h2, h3, .stMarkdown {
+    color: #4b0082;
+}
+
+.css-1emrehy.edgvbvh3 { 
+    color: #4b0082;
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 df = pd.read_csv('Placement.csv')
 X = df.drop('placement', axis=1)
