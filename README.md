@@ -1,6 +1,5 @@
-Here's a **professional README** for the [Placement\_Predictor](https://github.com/mandrilskills/Placement_Predictor) project, including the Streamlit deployment link:
 
----
+
 
 # 🎓 Placement Predictor
 
