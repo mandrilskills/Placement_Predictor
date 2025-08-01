@@ -4,27 +4,55 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #4B0082; /* Dark purple */
-        color: white;
-    }
-    .stMarkdown, .stSlider, .stNumberInput, .stSelectbox, .stButton, .stCheckbox {
-        color: white;
-    }
-    div[data-baseweb="slider"] > div {
-        background: white !important;
-    }
-    .stButton > button {
-        color: black !important;
-        background-color: #e0c6ff;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.markdown("""
+<style>
+/* Set background and text */
+.stApp {
+    background-color: #4B0082;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Form card styling */
+div.block-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    background-color: #5E17EB;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+/* Input text and number styling */
+input, .stNumberInput > div > div > input {
+    background-color: #fff !important;
+    color: black !important;
+    border-radius: 10px;
+}
+
+/* Slider color */
+div[data-baseweb="slider"] > div {
+    background: #ffffff22;
+}
+.css-1emrehy.edgvbvh3 { 
+    color: white;
+}
+
+/* Button styling */
+.stButton > button {
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
+
 df = pd.read_csv('Placement.csv')
 X = df.drop('placement', axis=1)
 y = df['placement']
