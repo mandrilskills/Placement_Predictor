@@ -4,7 +4,27 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #4B0082; /* Dark purple */
+        color: white;
+    }
+    .stMarkdown, .stSlider, .stNumberInput, .stSelectbox, .stButton, .stCheckbox {
+        color: white;
+    }
+    div[data-baseweb="slider"] > div {
+        background: white !important;
+    }
+    .stButton > button {
+        color: black !important;
+        background-color: #e0c6ff;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 df = pd.read_csv('Placement.csv')
 X = df.drop('placement', axis=1)
 y = df['placement']
